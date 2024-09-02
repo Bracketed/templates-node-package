@@ -1,8 +1,6 @@
 {
 	"extends": "@bracketed/typescript-config/extra-strict",
 	"compilerOptions": {
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
 		"lib": ["ESNext"],
 		"target": "ESNext",
 		"paths": {
@@ -11,6 +9,7 @@
 		"baseUrl": ".",
 		"rootDir": "./src",
 		"outDir": "./dist",
+		"esModuleInterop": true,
 		"skipLibCheck": true,
 		"declaration": false,
 		"declarationMap": false,
@@ -18,5 +17,5 @@
 		"listFiles": true,
 		"listEmittedFiles": true
 	},
-	"exclude": ["dist", "node_modules"]
+	"exclude": ["dist", "node_modules", "src/tests"]
 }

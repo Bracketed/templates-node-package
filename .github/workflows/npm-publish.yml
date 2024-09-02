@@ -1,0 +1,32 @@
+name: Node.js Package
+
+on:
+    release:
+        types: [created]
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+            - run: yarn install --immutable
+            - run: yarn build
+
+    publish-npm:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  registry-url: https://registry.npmjs.org/
+            - run: yarn install --immutable
+            - run: yarn build
+            - run: yarn npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.NODE_PUBLISH}}

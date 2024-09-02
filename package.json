@@ -1,27 +1,57 @@
 {
-	"name": "@ninjaninja140/node-ts-template",
-	"packageManager": "yarn@4.0.2",
+	"name": "@bracketed/logger",
+	"packageManager": "yarn@4.4.1",
 	"version": "1.0.0",
-	"repository": "https://github.com/ninjaninja140/nodejs-template-ts",
-	"author": {
-		"name": "ninjaninja140",
-		"url": "https://github.com/ninjaninja140"
+	"publishConfig": {
+		"access": "public"
 	},
-	"main": "dist/index.js",
+	"description": "An alternative to your run-of-the-mill node console logging functions!",
+	"author": "@bracketed",
+	"main": "./dist/cjs/index.js",
+	"module": "./dist/esm/index.mjs",
+	"types": "./types/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/cjs/index.js",
+			"import": "./dist/esm/index.mjs"
+		}
+	},
+	"files": [
+		"dist",
+		"types"
+	],
 	"type": "module",
 	"imports": {
 		"#root/*": "./dist/*.js"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bracketed/node-logger.git",
+		"directory": "."
+	},
+	"homepage": "https://bracketed.co.uk",
+	"sideEffects": false,
+	"bugs": {
+		"url": "https://github.com/bracketed/node-logger/issues"
+	},
+	"keywords": [
+		"bracketed",
+		"typescript",
+		"logger"
+	],
 	"scripts": {
-		"lint": "yarn prettier --write src/**/*.ts",
+		"build:cjs": "tsc -p tsconfig.cjs.json",
+		"build:esm": "tsc -p tsconfig.esm.json",
+		"build:types": "tsc -p tsconfig.types.json",
+		"build": "yarn build:cjs && yarn build:esm && yarn build:types",
+		"build:lint": "yarn build && yarn lint",
+		"lint": "yarn prettier --write dist/**/*.js && yarn prettier --write types/**/*.d.ts && yarn prettier --write types/**/*.d.ts.map",
 		"validate": "yarn prettier --check src/**/*.ts",
 		"lint:all": "yarn prettier --write .",
 		"validate:all": "yarn prettier --check .",
 		"start": "yarn node ./dist/index.js",
-		"test": "yarn tsx watch ./src/index.ts",
-		"compile": "yarn tsc",
-		"build": "docker build --tag ninjaninja140/ts-template .",
-		"up": "docker compose -f compose.yml up -d"
+		"test": "yarn node ./dist/esm/tests/index.js && yarn node ./dist/cjs/tests/index.js",
+		"compile": "yarn tsc"
 	},
 	"devDependencies": {
 		"@bracketed/typescript-config": "^4.4.0",
@@ -29,5 +59,10 @@
 		"prettier": "^3.1.1",
 		"tsx": "^4.7.0",
 		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"@sapphire/timestamp": "^1.0.3",
+		"colorette": "^2.0.20",
+		"tslib": "^2.7.0"
 	}
 }
