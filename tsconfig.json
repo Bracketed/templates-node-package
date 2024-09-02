@@ -3,16 +3,13 @@
 	"compilerOptions": {
 		"lib": ["ESNext"],
 		"target": "ESNext",
-		"paths": {
-			"#root/*": ["lib/*"]
-		},
 		"baseUrl": ".",
 		"rootDir": "./src",
 		"outDir": "./lib",
 		"esModuleInterop": true,
+		"declaration": false,
+		"declarationMap": false,
 		"skipLibCheck": true,
-		"declaration": true,
-		"declarationMap": true,
 		"incremental": false
 	},
 	"exclude": ["lib", "node_modules", "src/tests"]

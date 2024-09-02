@@ -1,7 +1,7 @@
 {
 	"name": "@bracketed/logger",
 	"packageManager": "yarn@4.4.1",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -42,22 +42,19 @@
 	"scripts": {
 		"build:cjs": "tsc -p tsconfig.cjs.json",
 		"build:esm": "tsc -p tsconfig.esm.json",
-		"build": "yarn build:cjs && yarn build:esm",
-		"build:production": "npm run build:cjs && npm run build:esm",
+		"build:types": "tsc -p tsconfig.types.json",
+		"build": "yarn build:cjs && yarn build:esm && yarn build:types",
+		"build:production": "npm run build:cjs && npm run build:esm && npm run build:types",
 		"build:lint": "yarn build && yarn lint",
 		"lint": "yarn prettier --write lib/**/*.js && yarn prettier --write types/**/*.d.ts && yarn prettier --write types/**/*.d.ts.map",
 		"validate": "yarn prettier --check src/**/*.ts",
 		"lint:all": "yarn prettier --write .",
-		"validate:all": "yarn prettier --check .",
-		"start": "yarn node ./lib/index.js",
-		"test": "yarn node ./lib/esm/tests/index.js && yarn node ./lib/cjs/tests/index.js",
-		"compile": "yarn tsc"
+		"validate:all": "yarn prettier --check ."
 	},
 	"devDependencies": {
 		"@bracketed/typescript-config": "^4.4.0",
 		"@types/node": "^20.10.5",
 		"prettier": "^3.1.1",
-		"tsx": "^4.7.0",
 		"typescript": "^5.3.3"
 	},
 	"dependencies": {
