@@ -43,7 +43,22 @@ npm install --save @bracketed/logger
 <h2 id="Usage">Usage</h2>
 
 ```ts
+// ESM
 import { Logger, LogLevel } from '@bracketed/logger';
+const console = new Logger();
+
+console.info('Hello World!');
+console.debug('Hello World!');
+console.warn('Hello World!');
+console.error('Hello World!');
+console.fatal('Hello World!');
+console.trace('Hello World!');
+console.write(LogLevel.Info, 'Hello World!');
+```
+
+```ts
+// CJS
+const { Logger, LogLevel } = require('@bracketed/logger');
 const console = new Logger();
 
 console.info('Hello World!');
