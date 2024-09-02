@@ -8,16 +8,17 @@
 	"description": "An alternative to your run-of-the-mill node console logging functions!",
 	"author": "@bracketed",
 	"main": "./dist/cjs/index.js",
-	"module": "./dist/esm/index.mjs",
-	"types": "./dist/esm/index.d.ts",
+	"module": "./dist/esm/index.js",
+	"types": "./types/index.d.ts",
 	"exports": {
 		".": {
 			"require": "./dist/cjs/index.js",
-			"import": "./dist/esm/index.mjs"
+			"import": "./dist/esm/index.js"
 		}
 	},
 	"files": [
-		"dist"
+		"dist",
+		"types"
 	],
 	"type": "module",
 	"imports": {
