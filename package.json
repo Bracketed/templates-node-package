@@ -44,6 +44,7 @@
 		"build:esm": "tsc -p tsconfig.esm.json",
 		"build:types": "tsc -p tsconfig.types.json",
 		"build": "yarn build:cjs && yarn build:esm && yarn build:types",
+		"build:production": "npm run build:cjs && npm run build:esm && npm run build:types",
 		"build:lint": "yarn build && yarn lint",
 		"lint": "yarn prettier --write dist/**/*.js && yarn prettier --write types/**/*.d.ts && yarn prettier --write types/**/*.d.ts.map",
 		"validate": "yarn prettier --check src/**/*.ts",
