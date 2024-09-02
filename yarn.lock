@@ -5,14 +5,12 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@bracketed/logger@workspace:.":
+"@bracketed/package@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@bracketed/logger@workspace:."
+  resolution: "@bracketed/package@workspace:."
   dependencies:
     "@bracketed/typescript-config": "npm:^4.4.0"
-    "@sapphire/timestamp": "npm:^1.0.3"
     "@types/node": "npm:^20.10.5"
-    colorette: "npm:^2.0.20"
     prettier: "npm:^3.1.1"
     tslib: "npm:^2.7.0"
     typescript: "npm:^5.3.3"
@@ -26,26 +24,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/timestamp@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@sapphire/timestamp@npm:1.0.3"
-  checksum: 10c0/97d8b9196674b1272b87366d386bd7077bfc14f0227e79bce36d4d13231e2f14eb6a517b043117916dd8fee2486d421b01494d462f7f01b6d951c2b50042bc7f
-  languageName: node
-  linkType: hard
-
 "@types/node@npm:^20.10.5":
   version: 20.10.5
   resolution: "@types/node@npm:20.10.5"
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10c0/be30609aae0bfe492097815f166ccc07f465220cb604647fa4e5ec05a1d16c012a41b82b5f11ecfe2485cbb479d4d20384b95b809ca0bcff6d94d5bbafa645bb
-  languageName: node
-  linkType: hard
-
-"colorette@npm:^2.0.20":
-  version: 2.0.20
-  resolution: "colorette@npm:2.0.20"
-  checksum: 10c0/e94116ff33b0ff56f3b83b9ace895e5bf87c2a7a47b3401b8c3f3226e050d5ef76cf4072fb3325f9dc24d1698f9b730baf4e05eeaf861d74a1883073f4c98a40
   languageName: node
   linkType: hard
 

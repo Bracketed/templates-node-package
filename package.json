@@ -1,11 +1,11 @@
 {
-	"name": "@bracketed/logger",
+	"name": "@bracketed/package",
 	"packageManager": "yarn@4.4.1",
-	"version": "1.0.4",
+	"version": "1.0.0",
 	"publishConfig": {
 		"access": "public"
 	},
-	"description": "An alternative to your run-of-the-mill node console logging functions!",
+	"description": "Description",
 	"author": "@bracketed",
 	"main": "./lib/cjs/index.js",
 	"module": "./lib/esm/index.js",
@@ -26,18 +26,17 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/bracketed/node-logger.git",
+		"url": "git+https://github.com/bracketed/templates-package.git",
 		"directory": "."
 	},
 	"homepage": "https://bracketed.co.uk",
 	"sideEffects": false,
 	"bugs": {
-		"url": "https://github.com/bracketed/node-logger/issues"
+		"url": "https://github.com/bracketed/templates-package/issues"
 	},
 	"keywords": [
 		"bracketed",
-		"typescript",
-		"logger"
+		"typescript"
 	],
 	"scripts": {
 		"build:cjs": "tsc -p tsconfig.cjs.json",
@@ -58,8 +57,6 @@
 		"typescript": "^5.3.3"
 	},
 	"dependencies": {
-		"@sapphire/timestamp": "^1.0.3",
-		"colorette": "^2.0.20",
 		"tslib": "^2.7.0"
 	}
 }
