@@ -1,7 +1,7 @@
 {
 	"name": "@bracketed/logger",
 	"packageManager": "yarn@4.4.1",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -9,7 +9,7 @@
 	"author": "@bracketed",
 	"main": "./dist/cjs/index.js",
 	"module": "./dist/esm/index.mjs",
-	"types": "./types/index.d.ts",
+	"types": "./dist/esm/index.d.ts",
 	"exports": {
 		".": {
 			"require": "./dist/cjs/index.js",
@@ -17,8 +17,7 @@
 		}
 	},
 	"files": [
-		"dist",
-		"types"
+		"dist"
 	],
 	"type": "module",
 	"imports": {
@@ -42,9 +41,8 @@
 	"scripts": {
 		"build:cjs": "tsc -p tsconfig.cjs.json",
 		"build:esm": "tsc -p tsconfig.esm.json",
-		"build:types": "tsc -p tsconfig.types.json",
-		"build": "yarn build:cjs && yarn build:esm && yarn build:types",
-		"build:production": "npm run build:cjs && npm run build:esm && npm run build:types",
+		"build": "yarn build:cjs && yarn build:esm",
+		"build:production": "npm run build:cjs && npm run build:esm",
 		"build:lint": "yarn build && yarn lint",
 		"lint": "yarn prettier --write dist/**/*.js && yarn prettier --write types/**/*.d.ts && yarn prettier --write types/**/*.d.ts.map",
 		"validate": "yarn prettier --check src/**/*.ts",

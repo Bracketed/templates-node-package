@@ -11,8 +11,8 @@
 		"outDir": "./dist",
 		"esModuleInterop": true,
 		"skipLibCheck": true,
-		"declaration": false,
-		"declarationMap": false,
+		"declaration": true,
+		"declarationMap": true,
 		"incremental": false,
 		"listFiles": true,
 		"listEmittedFiles": true
