@@ -2,6 +2,9 @@ name: Node.js Package
 
 on:
     push:
+        paths:
+            - src/**
+            - package.json
     workflow_dispatch:
 
 jobs:
@@ -29,5 +32,6 @@ jobs:
                   registry-url: https://npm.pkg.github.com/
             - run: yarn install --immutable
             - run: yarn build
+            - run: yarn npm publish
               env:
                   NODE_AUTH_TOKEN: ${{secrets.GIT_PUBLISH}}

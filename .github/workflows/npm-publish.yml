@@ -2,6 +2,9 @@ name: Node.js Package
 
 on:
     push:
+        paths:
+            - src/**
+            - package.json
     workflow_dispatch:
 
 jobs:
