@@ -29,9 +29,9 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: 22
-                  registry-url: https://npm.pkg.github.com/
             - run: npm install
             - run: npm run build:production
+            - run: npm config set registry https://npm.pkg.github.com/
             - run: npm publish --access public
               env:
                   NODE_AUTH_TOKEN: ${{secrets.GIT_PUBLISH}}
