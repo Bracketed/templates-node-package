@@ -1,14 +1,15 @@
 {
 	"extends": "@bracketed/typescript-config/extra-strict",
 	"compilerOptions": {
+		"module": "ESNext",
 		"lib": ["ESNext"],
 		"target": "ESNext",
 		"baseUrl": ".",
 		"rootDir": "./src",
 		"outDir": "./lib",
+		"declaration": true,
+		"declarationMap": true,
 		"esModuleInterop": true,
-		"declaration": false,
-		"declarationMap": false,
 		"skipLibCheck": true,
 		"incremental": false
 	},
