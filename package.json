@@ -1,28 +1,28 @@
 {
 	"name": "@bracketed/logger",
 	"packageManager": "yarn@4.4.1",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"publishConfig": {
 		"access": "public"
 	},
 	"description": "An alternative to your run-of-the-mill node console logging functions!",
 	"author": "@bracketed",
-	"main": "./dist/cjs/index.js",
-	"module": "./dist/esm/index.js",
+	"main": "./lib/cjs/index.js",
+	"module": "./lib/esm/index.js",
 	"types": "./types/index.d.ts",
 	"exports": {
 		".": {
-			"require": "./dist/cjs/index.js",
-			"import": "./dist/esm/index.js"
+			"require": "./lib/cjs/index.js",
+			"import": "./lib/esm/index.js"
 		}
 	},
 	"files": [
-		"dist",
+		"lib",
 		"types"
 	],
 	"type": "module",
 	"imports": {
-		"#root/*": "./dist/*.js"
+		"#root/*": "./lib/*.js"
 	},
 	"repository": {
 		"type": "git",
@@ -45,12 +45,12 @@
 		"build": "yarn build:cjs && yarn build:esm",
 		"build:production": "npm run build:cjs && npm run build:esm",
 		"build:lint": "yarn build && yarn lint",
-		"lint": "yarn prettier --write dist/**/*.js && yarn prettier --write types/**/*.d.ts && yarn prettier --write types/**/*.d.ts.map",
+		"lint": "yarn prettier --write lib/**/*.js && yarn prettier --write types/**/*.d.ts && yarn prettier --write types/**/*.d.ts.map",
 		"validate": "yarn prettier --check src/**/*.ts",
 		"lint:all": "yarn prettier --write .",
 		"validate:all": "yarn prettier --check .",
-		"start": "yarn node ./dist/index.js",
-		"test": "yarn node ./dist/esm/tests/index.js && yarn node ./dist/cjs/tests/index.js",
+		"start": "yarn node ./lib/index.js",
+		"test": "yarn node ./lib/esm/tests/index.js && yarn node ./lib/cjs/tests/index.js",
 		"compile": "yarn tsc"
 	},
 	"devDependencies": {
