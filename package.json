@@ -57,6 +57,7 @@
 		"esbuild-plugin-file-path-extensions": "^2.1.4",
 		"esbuild-plugin-version-injector": "^1.2.1",
 		"prettier": "^3.5.3",
+		"tslib": "^2.8.1",
 		"tsup": "^8.5.0",
 		"typescript": "^5.8.3"
 	},
