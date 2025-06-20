@@ -15,7 +15,7 @@
 	"exports": {
 		".": {
 			"import": {
-				"types": "./lib/esm/index.d.mts",
+				"types": "./lib/esm/index.d.ts",
 				"default": "./lib/esm/index.mjs"
 			},
 			"require": {
