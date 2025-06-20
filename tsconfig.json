@@ -25,7 +25,7 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"alwaysStrict": true,
-		"importHelpers": false,
+		"importHelpers": true,
 		"newLine": "crlf",
 		"noEmitHelpers": false,
 		"noFallthroughCasesInSwitch": true,
