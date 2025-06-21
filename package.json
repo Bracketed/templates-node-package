@@ -48,7 +48,7 @@
 		"update": "yarn upgrade-interactive"
 	},
 	"devDependencies": {
-		"@bracketed/typescript-config": "^4.5.0",
+		"@bracketed/typescript-config": "^4.7.0",
 		"@swc/core": "^1.12.5",
 		"@types/node": "^24.0.3",
 		"esbuild": "^0.25.5",

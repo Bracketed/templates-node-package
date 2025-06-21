@@ -9,7 +9,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@bracketed/package@workspace:."
   dependencies:
-    "@bracketed/typescript-config": "npm:^4.5.0"
+    "@bracketed/typescript-config": "npm:^4.7.0"
     "@swc/core": "npm:^1.12.5"
     "@types/node": "npm:^24.0.3"
     esbuild: "npm:^0.25.5"
@@ -24,10 +24,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@bracketed/typescript-config@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "@bracketed/typescript-config@npm:4.5.0"
-  checksum: 10c0/b5f0f415d6dbe073b4a20b17a337a4c955d07bbfc8af80adaed0b87a590fbc1fa84d82e235e386cdb24fc9e7c6416b596d7f2444cbd2991bc97dd738844841c8
+"@bracketed/typescript-config@npm:^4.7.0":
+  version: 4.7.0
+  resolution: "@bracketed/typescript-config@npm:4.7.0"
+  checksum: 10c0/4c9e59f78ffe4cca8f0011cbd15c5a69520efe592a5fbce81f7d4aa46fc6a290c2c1891ac2fcb5294cd4b5417c529122bc9d547d52e04038503606eba85bd133
   languageName: node
   linkType: hard
 
