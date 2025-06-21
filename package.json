@@ -48,8 +48,8 @@
 		"update": "yarn upgrade-interactive"
 	},
 	"devDependencies": {
-		"@bracketed/typescript-config": "^4.4.0",
-		"@swc/core": "^1.12.4",
+		"@bracketed/typescript-config": "^4.5.0",
+		"@swc/core": "^1.12.5",
 		"@types/node": "^24.0.3",
 		"esbuild": "^0.25.5",
 		"esbuild-fix-imports-plugin": "^1.0.21",
