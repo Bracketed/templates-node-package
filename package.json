@@ -63,5 +63,8 @@
 	},
 	"engines": {
 		"node": ">=18"
+	},
+	"dependencies": {
+		"@bracketed/tsup-configuration": "^1.0.1"
 	}
 }
